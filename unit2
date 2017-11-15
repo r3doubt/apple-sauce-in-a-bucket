@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#Unit Test 2
+#loop to unload unnecessary services using launchctl
+# to disable webcam add "com.apple.IIDCAssistant.plist" to disable bluetooth add "com.apple.blued.plist" 
+#other optional com.apple.airportPrefsUpdater.plist, com.apple.AirPort.wps.plist, #com.apple.RFBRegisterMDNS_RemoteManagement.plist, com.apple.RFBRegisterMDNS_ScreenSharing.plist
+
+array=("com.apple.nis.ypbind.plist" "com.apple.racoon.plist" "com.apple.RemoteDesktop.PrivilegeProxy.plist" "com.apple.RFBEventHelper.plist" "com.apple.UserNotificationCenter.plist" "com.apple.webdavfs_load_kext.plist" "org.postfix.master")
+for i in "${array[@]}"
+do
+launchctl unload -w /System/Library/LaunchDaemons/$i
+done
+
