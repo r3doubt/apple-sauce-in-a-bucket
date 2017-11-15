@@ -1,0 +1,7 @@
+#!/bin/bash
+#This is a loop to strip setuid bit
+array=("/usr/bin/at" "/usr/bin/atq" "/usr/bin/atrm" "/usr/bin/batch" "/usr/bin/crontab" "/usr/bin/newgrp" "/usr/sbin/traceroute" "/usr/sbin/traceroute6")
+for i in "${array[@]}"
+do
+chmod -s $i 
+done
