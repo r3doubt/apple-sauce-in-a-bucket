@@ -1,0 +1,4 @@
+#!/bin/bash
+#This example changes the global umask setting to 027 from 022
+#Changing the umask setting to 027, only group members to read files and folders
+echo "umask 027" >> /etc/launchd.conf
