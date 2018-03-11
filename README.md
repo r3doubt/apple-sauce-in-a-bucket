@@ -6,6 +6,6 @@ Heavy version to follow later, consider looking at NCSC provisioning script for 
 Run the quickaudit script first to check SIP status and get info on stuff you might want to turn off<br />
 yeah, I know I should move all the default writes to arrays and loops, feel free to contribute<br />
 For more info consult the BSides Columbus talk<br />
-Boot to recovery, from shell run "csrutil disable && reboot" from shell<br />
+Boot to recovery, from terminal run "csrutil disable && reboot"<br />
 After running script make sure you reboot to recovery and run "csrutil enable && reboot"<br />
 To run, rename file to end in .sh, "sudo chmod" to make executable, then run with "sudo" ./<br />
