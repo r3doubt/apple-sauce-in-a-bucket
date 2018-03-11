@@ -71,6 +71,7 @@ networksetup -setv6off 'Thunderbolt Bridge' && networksetup -setv6off Wi-Fi
 /usr/libexec/ApplicationFirewall/socketfilterfw --setloggingmode on
 /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned on
 /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+#/usr/libexec/ApplicationFirewall/socketfilterfw --setblockall on
 #Still working on basic firewall settings please manpage PF firewall 
 
 
