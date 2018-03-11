@@ -10,4 +10,6 @@ find / -user root -perm -04000 -ls >quickAuditLog.txt 2>/dev/null
 find / -user root -perm -02000 -ls >>quickAuditLog.txt 2>/dev/null
 #quick list of services scheduled to run from launchd
 launchctl list >>quickAuditLog.txt
-
+#check your loginwindow gui plist (or any other plist)
+/usr/libexec/PlistBuddy -c print /Library/Preferences/com.apple.loginwindow.plist >>quickAuditLog.txt
+	exit 1
