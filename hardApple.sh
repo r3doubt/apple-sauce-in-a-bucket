@@ -54,18 +54,22 @@ array=("com.apple.nis.ypbind.plist" "com.apple.racoon.plist" "com.apple.RemoteDe
 for i in "${array[@]}"
 do
 launchctl unload -w /System/Library/LaunchDaemons/$i
+done
+exit 1
 #This is a loop to strip setuid bits
 array=("/usr/sbin/traceroute" "/usr/sbin/traceroute6")
 for i in "${array[@]}"
 do
 chmod -s $i 
 done
+exit 1
 #This is a loop to strip setgid bit
 array=("/usr/bin/wall" "/usr/bin/write" "/usr/sbin/postdrop" "/usr/sbin/postqueue")
 for i in "${array[@]}"
 do
 chmod g-s $i 
 done
+exit 1
 #This section has more network and firewall stuff
 #disable IPV6, may require tweak on the network name for different OS versions, use networksetup list command for details
 networksetup -setv6off 'Thunderbolt Bridge' && networksetup -setv6off Wi-Fi
@@ -75,6 +79,6 @@ networksetup -setv6off 'Thunderbolt Bridge' && networksetup -setv6off Wi-Fi
 /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 #/usr/libexec/ApplicationFirewall/socketfilterfw --setblockall on
 #Still working on basic firewall settings please manpage PF firewall 
-
+exit 0
 
 
