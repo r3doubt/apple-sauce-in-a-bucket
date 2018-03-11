@@ -1,0 +1,7 @@
+#!/bin/bash
+#commands to remove multicast from Bonjour/Zeroconf mDNSResponder service
+launchctl unload /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
+launchctl unload /System/Library/LaunchDaemons/com.apple.mDNSResponderHelper.plist
+defaults write /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist ProgramArguments -array-add "-NoMulticastAdvertisements"
+launchctl load /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
+launchctl load /System/Library/LaunchDaemons/com.apple.mDNSResponderHelper.plist

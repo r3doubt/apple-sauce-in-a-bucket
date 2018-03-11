@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+#code to ensure commands are run using "sudo"
+if [ "$(id -u)" != "0" ]; then
+	echo "Sorry, you must be root."
+	exit 1
+fi

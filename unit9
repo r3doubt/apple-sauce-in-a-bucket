@@ -1,0 +1,5 @@
+#!/bin/bash
+#first iteration of network script
+
+#disable IPV6, may require tweak on the network name for different OS versions, use networksetup list command for details
+networksetup -setv6off 'Thunderbolt Bridge' && networksetup -setv6off Wi-Fi

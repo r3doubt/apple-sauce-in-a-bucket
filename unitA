@@ -1,0 +1,3 @@
+#!/bin/bash
+#secure user home directory on multi-user systems
+chmod go-rx /Users/$USER

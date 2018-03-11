@@ -1,0 +1,5 @@
+#!/bin/bash
+#need to test
+# Turn off Remote Management service using the following commands:
+sudo launchctl unload -w /System/Library/LaunchAgents/\
+com.apple.RemoteDesktop.plist

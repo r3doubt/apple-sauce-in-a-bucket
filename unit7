@@ -1,0 +1,8 @@
+#!/bin/bash
+#This is a loop to strip setgid bit 
+array=("/usr/bin/wall" "/usr/bin/write" "/usr/sbin/postdrop" "/usr/sbin/postqueue")
+for i in "${array[@]}"
+do
+chmod g-s $i 
+done
+

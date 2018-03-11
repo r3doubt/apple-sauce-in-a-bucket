@@ -1,0 +1,7 @@
+#!/bin/bash
+#unit test 8 
+#commands to disable guest account and auto-login
+defaults write /Library/Preferences/com.apple.AppleFileServer guestAccess -bool NO
+defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server AllowGuestAccess -bool NO
+defaults delete /Library/Preferences/com.apple.loginwindow autoLoginUser
+rm /etc/kcpassword
