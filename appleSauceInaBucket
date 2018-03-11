@@ -1,8 +1,0 @@
-#!/bin/bash
-#macOS config script v.0.0
-#Script for hardening security configurations on Sierra
-#Boot to recovery, from shell run "csrutil disable && reboot" from shell
-#After running script make sure you reboot to recovery and run "csrutil enable && reboot"
-#To run, rename file to end in .sh, "sudo chmod" to make executable, then run with "sudo" ./
-#Contact info@r3doubt.com
-
