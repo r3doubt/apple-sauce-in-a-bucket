@@ -12,4 +12,4 @@
 +launchctl list >>quickAuditLog.txt
 +#check your loginwindow gui plist (or any other plist)
 +/usr/libexec/PlistBuddy -c print /Library/Preferences/com.apple.loginwindow.plist >>quickAuditLog.txt
-+	exit 1
++	exit 0
