@@ -1,11 +1,8 @@
 #!/bin/bash
 #This script by r3doubt 
-#hardApple v0.1
+#hardApple v0.1.1
 #Test before you use and modify as needed
 #Read the readme file
-#Implements light version of NIST SP-800-179 and NCSC EUD for 10.12 10.13 configs
-#Heavy version to follow later consider looking at NCSC provisioning script for 10.12 in meantime
-#yeah, I know I should move all the default writes to arrays and loops, feel free to contribute
 #Ensure commands are run using "sudo"
 if [ "$(id -u)" != "0" ]; then
  echo "Sorry, you must be root."
