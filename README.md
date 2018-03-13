@@ -1,4 +1,4 @@
-# apple-sauce-in-a-bucketv0.1
+# apple-sauce-in-a-bucketv0.1.beta
 by r3oubt <br />
 hardApple v0.1<br />
 Implements light version of NIST SP-800-179 and NCSC EUD for 10.12 10.13 configs<br />
