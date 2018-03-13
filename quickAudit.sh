@@ -5,7 +5,8 @@ if [ "$(id -u)" != "0" ]; then
 	echo "Sorry, you must be root."
 	exit 1
 fi
-
+#check SIP status
+csrutil status >> [insert pathway]/quickAudit.txt
 #audit list of setuid and setgid for third-party binaries
 echo "List of setuid and setgid files" >> [insert pathway]/quickAudit.txt
 find / -perm -4000 -o -perm -2000 -type f >> [insert pathway]/quickAudit.txt 2>/dev/null
