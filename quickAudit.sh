@@ -15,4 +15,4 @@ launchctl list >> /Users/[user]/Desktop/quickAudit.txt
 
 #check your loginwindow plist (or any other plist)
 echo "loginwindow plist contents" >> /Users/[user]/Desktop/quickAudit.txt
-/usr/libexec/PlistBuddy -c "Print" com.apple.loginwindow.plist >> /Users/[user]/Desktop/quickAudit.txt
+/usr/libexec/PlistBuddy -c "Print" /Library/Preferences/com.apple.loginwindow.plist >> /Users/[user]/Desktop/quickAudit.txt
